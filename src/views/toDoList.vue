@@ -24,8 +24,7 @@ export default {
   },
   methods: {
     finishHandler(item) {
-    //   item.done = !item.done;
-      alert(item);
+      this.item.done = !item.done;
     },
   },
 };

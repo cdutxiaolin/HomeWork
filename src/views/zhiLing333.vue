@@ -1,15 +1,17 @@
 <template>
 <!-- vue 的模板里面，所有的内容要被一个根节点包含起来-->
   <div id="zhiling333">
+    <div @mouseover="divmouseover" id="div">
+      <textarea @mouseover.stop="textareamouseover()">这是一个文件域</textarea>
+    </div>
   </div>
 </template>
 
 <style>
-			#zhiling333 {
-				background-color: red;
-        width: 300px;
-        height: 300px;
-			}
+  #zhiling333 {
+          background-color: red;
+          height: 300px;
+        }
 </style>
 
 <script>
@@ -25,10 +27,12 @@ export default {
     // this.init1();
   },
   methods: {
-    init1() {
+    divmouseover() {
+      alert('鼠标移动到了div上了');
+    },
+    textareamouseover() {
+      alert('鼠标移动到了textarea上了');
     },
   },
 };
 </script>
-<style>
-</style>
